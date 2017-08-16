@@ -12,5 +12,9 @@ module.constant('__env', env);
 
 module.controller('HelloController', function($scope ,$location) {
     $scope.welcomeMessage = 'Hello, world!' +" "+ __env.apiUrl;
+	var hostname = $location.host();
+	hostname = hostname.substring(hostname.indexOf("-"),hostname.length);
+	$scope.host = hostname;
 	$scope.url = $location.protocol() + '://'+ $location.host() +':'+  $location.port(); 
 });
+
