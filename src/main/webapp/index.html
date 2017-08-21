@@ -11,7 +11,7 @@
   <meta charset="utf-8">
 </head>
 		<div ng-controller="Hello">
-			<p>The ID is {{greeting.firstName}}</p>
-			<p>The content is {{greeting.lastName}}</p>
+			<p ng-bind='greeting'></p>
+			<p ng-bind='greeting.lastName'></p>			
 		</div>
 </html>
